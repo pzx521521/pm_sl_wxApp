@@ -1,0 +1,63 @@
+@import "/utils/common.wxss";
+
+.tag-btns-container {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  width: 710rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag-btn {
+  display: inline-block;
+  width: 168rpx;
+  height: 60rpx;
+  border: 1px solid lightgray;
+  border-radius: 30rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+  margin-left: 25rpx;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+
+.tags-section {
+  margin-top: 40rpx;
+}
+
+.tips1 {
+  margin-top: 40rpx;
+  width: 750rpx;
+  display: block;
+  font-size: 38rpx;
+  color: #333;
+  text-align: center;
+}
+
+.tips2 {
+  margin-top: 15rpx;
+  width: 750rpx;
+  display: block;
+  font-size: 24rpx;
+  color: #646464;
+  text-align: center;
+}
+
+.choose-btn{
+  width: 300rpx;
+  height: 80rpx;
+  border: 1px solid lightgray;
+  border-radius: 40rpx;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 80rpx;
+  position: absolute;
+  left: 225rpx;
+  bottom: 20rpx
+}
+.interest-selected{
+  background-color: rgb(15, 54, 145);
+    color: #ffffff;
+}

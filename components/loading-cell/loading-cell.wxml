@@ -1,0 +1,7 @@
+<wxs module="util" src="loading-cell.wxs"></wxs>
+
+<view class='wrapper' wx:if="{{status == 1 || status == 3 || status == 4}}">
+  <image class='loading' src="/assets/images/loading.gif" wx:if="{{status == 1}}"></image>
+  <image class='no-data' src="/assets/images/a01.png" wx:if="{{status == 4}}"></image>
+  <view class='status-label'>{{util.statusString(status)}}</view>
+</view>

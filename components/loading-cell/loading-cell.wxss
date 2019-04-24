@@ -1,0 +1,28 @@
+.status-label {
+  width: 200rpx;
+  height: 60rpx;
+  font-size: 32rpx;
+  text-align: left;
+  line-height: 60rpx;
+}
+
+.wrapper {
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.loading {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.no-data {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}

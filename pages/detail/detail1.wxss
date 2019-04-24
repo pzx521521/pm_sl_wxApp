@@ -1,0 +1,358 @@
+@import "/utils/common.wxss";
+
+page {
+  padding-top: 228rpx;
+}
+
+.tab-view {
+  width: 750rpx;
+  height: 80rpx;
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  flex-direction: row;
+}
+
+.video-image {
+  width: 750rpx;
+  height: 400rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.play-btn {
+  display: flex;
+  position: absolute;
+  top: 400rpx;
+  left: 300rpx;
+  height: 120rpx;
+  width: 120rpx;
+}
+
+.tab-btn {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tab-text {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+
+.tab-text-selected {
+  color: #0f3691;
+}
+
+.tab-line {
+  margin-top: 15rpx;
+  width: 80rpx;
+  height: 5rpx;
+  background-color: #003797;
+  opacity: 0;
+}
+
+.tab-line-selected {
+  opacity: 1;
+}
+
+.teacher-container {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background-color: white;
+  border-radius: 1rpx;
+}
+
+.teacher-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 130rpx;
+}
+
+.teacher-top-right {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.teacher-header {
+  margin-left: 10rpx;
+  margin-bottom: 5rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+
+.teacher-name {
+  font-size: 32rpx;
+  width: 400rpx;
+}
+
+.teacher-liked {
+  margin-top: 10rpx;
+  text-align: left;
+  font-size: 24rpx;
+}
+
+.focus {
+  margin-left: 40rpx;
+  background-color: #e6ebf8;
+  width: 120rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.focus-text {
+  margin-left: 5rpx;
+  font-size: 24rpx;
+  color: #0d3691;
+}
+
+.focus-image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.teacher-bottom {
+  margin: 20rpx;
+  font-size: 24rpx;
+}
+
+.header-container, .middle-container {
+  display: flex;
+  padding: 20rpx;
+  flex-direction: column;
+}
+
+.intro, .picture-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.course-title {
+  margin-top: 20rpx;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.course-type-container {
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  align-items: center;
+}
+
+.course-type {
+  font-size: 24rpx;
+  color: white;
+  width: 80rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+  background-color: #0f3691;
+}
+
+.course-learned {
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #969696;
+}
+
+.course-price {
+  font-size: 38rpx;
+  color: #ff3c2d;
+  width: 100rpx;
+  height: 50rpx;
+  margin-bottom: 25rpx;
+}
+
+.line-gap {
+  width: 750rpx;
+  height: 10rpx;
+  background-color: #f0f0f0;
+}
+
+.bg-text, .target-text, .audiences-text {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 24rpx;
+  color: #646464;
+}
+
+.detail-image {
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+  width: 690rpx;
+  height: 400rpx;
+}
+
+.comment-cell {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.header {
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+
+.comment-right-content {
+  display: flex;
+  margin-top: 60rpx;
+  margin-left: 20rpx;
+  flex-direction: column;
+  flex: 1;
+}
+
+.comment-nick-name {
+  color: #646464;
+  font-size: 24rpx;
+}
+
+.comment-content {
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.comment-line {
+  margin-top: 30rpx;
+  height: 2rpx;
+  margin-left: 30rpx;
+  width: 720rpx;
+  background-color: #dcdcdc;
+}
+
+.nav-bar-menu {
+  background-color: #003797;
+  top: 148rpx;
+  width: 750rpx;
+  height: 80rpx;
+  position: fixed;
+  z-index: 10000;
+}
+
+.comment-btn {
+  margin-left: 650rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.no-data {
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+
+.head-content {
+  width: 500rpx;
+  height: 40rpx;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.head-tap {
+  position: absolute;
+  border-radius: 10rpx;
+  background-color: rgb(15, 54, 145);
+  color: #fff;
+  right: 20rpx;
+  font-size: 28rpx;
+  padding: 5rpx 10rpx;
+}
+
+.middle-content {
+  display: flex;
+  position: relative;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.middle-tap {
+  margin-top: 20rpx;
+  background-color: rgb(15, 54, 145);
+  color: #fff;
+  width: 80rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  padding: 10rpx 10rpx;
+  font-size: 28rpx;
+}
+
+.file-list-title {
+  font-size: 24rpx;
+  color: #333;
+  margin-left: 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  margin-right: 10rpx;
+  display: flex;
+}
+
+.file-list-content {
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+.file-head {
+  font-size: 28rpx;
+  color: #333;
+  padding: 5rpx 0;
+}
+
+.file-list-btn {
+  background-color: rgb(15, 54, 145);
+  color: #fff;
+  width: 100rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-right: 10rpx;
+}
+
+.active{
+  /* background-color: #C6C6C6 */
+}
+
+.address{
+  margin-left: 20rpx
+}
+
+.qrcode-content{
+  width: 750rpx;
+  height: 250rpx;
+  background-color: #f0f0f0;
+}
+.qrcode-image{
+  width: 160rpx;
+  height: 160rpx;
+  align-items: center;
+  margin-left: 295rpx;
+  margin-top: 45rpx
+}
+
+.course-date {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #969696;
+}

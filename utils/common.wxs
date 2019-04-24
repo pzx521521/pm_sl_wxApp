@@ -1,0 +1,28 @@
+
+function courseTypeString(type) {
+  if (type == 1) return '线上'
+  if (type == 2) return '线下'
+  if (type == 3) return '专栏'
+}
+
+function formatNumber(n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+function formatDate(timestamp, format) {
+  var date = getDate(timestamp)
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+
+  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute].map(formatNumber).join(':')
+}
+
+module.exports = {
+  courseTypeString: courseTypeString,
+  formatDate: formatDate
+}

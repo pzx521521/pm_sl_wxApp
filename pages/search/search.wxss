@@ -1,0 +1,159 @@
+@import "/utils/common.wxss";
+.content{
+  height: 100%;  
+  overflow: hidden;
+}
+.search-fixed{  
+  overflow: hidden;
+}
+.search-bg {
+  /* height: 88rpx; */
+  background-color: #003797;
+  height: 88rpx;
+  padding-top: 10rpx;
+}
+
+.search-bg-white {
+  margin-left: 20rpx;
+  width: 710rpx;
+  height: 68rpx;
+  background-color: #f3f2f4;
+  border-radius: 5rpx;
+  align-items: center;
+  display: flex;
+}
+
+.input {
+  margin-left: 20rpx;
+  width: 670rpx;
+  font-size: 24rpx;
+}
+
+.category-title {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+}
+
+.tag-btns-container {
+  margin-top: 10rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag-btn {
+  display: inline-block;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  height: 60rpx;
+  border: 1px solid lightgray;
+  border-radius: 30rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+  margin-left: 25rpx;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+.search-results{
+  overflow: hidden;
+  margin-top: 100rpx;
+}
+.search-checkbox {
+  display: flex;
+  height: 50rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-items {
+  margin: 20rpx;
+  background-color: white;
+  height: 220rpx;
+  border-radius: 5rpx;
+  border: 1px solid #eee;
+  box-shadow: 0px 0px 20px 0px rgba(26, 53, 140, 0.15);
+}
+
+.search-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.search-text {
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}
+
+.search-item {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20rpx;
+  margin-top: 20rpx
+}
+
+.search-img {
+  display: inline-block;
+  overflow: hidden;
+  margin: 20rpx;
+  width: 250rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+}
+
+.content-detail {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-content {
+  display: flex;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  flex: 1;
+  flex-direction: column;
+}
+
+.search-title {
+  /* color: #333;
+  font-size: 30rpx;
+  max-width: 230rpx;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block; */
+  font-size: 24rpx;
+}
+
+.cell-gap {
+  flex: 1;
+}
+
+.search-type {
+  display: block;
+  font-size: 20rpx;
+  color: white;
+  width: 60rpx;
+  height: 35rpx;
+  text-align: center;
+  line-height: 35rpx;
+  border-radius: 5rpx;
+  background-color: #0f3691;
+}
+
+.search-price {
+  font-size: 28rpx;
+  color: #ec5f59;
+}
+
+.no-results {
+  align-items: center;
+  display: flex;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  justify-content: center;
+}

@@ -1,0 +1,25 @@
+<nav-bar title="修改资料">
+  <image bindtap='onBack' class='nav-left-icon' src="/assets/images/header/header_left.png"></image>
+</nav-bar>
+
+<form bindsubmit="bindFormSubmit">
+  <view class='wrapper'>
+    <image class="logo" src="{{userInfo.avatarUrl}}"></image>
+    <view class='label-container'>
+      <image class="icon-phone" src='/assets/images/login_iphone.png'></image>
+      <text class="label">手机号码</text>
+    </view>
+    <view class='input-bg box-shadow'>
+      <input class='input' name="useraccount" value="{{userInfo.phone}}"></input>
+    </view>    
+
+    <view class='label-container'>
+      <image class="icon-phone" src='/assets/images/login_password.png'></image>
+      <text class="label">加密锁号</text>
+    </view>
+    <view class='input-bg box-shadow'>
+      <input class='input' name="userpassword" value="{{userInfo.lockNum}}"></input>
+    </view>
+    <button class='submit' form-type="submit">修改</button>
+  </view>
+</form>

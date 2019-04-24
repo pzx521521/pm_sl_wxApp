@@ -1,0 +1,5 @@
+<view class='nav-bar'>
+  <slot></slot>
+  <!-- <image class='nav-back' bindtap='onBack' src="{{leftIcon}}"></image> -->
+  <text class='nav-title'>{{title}}</text>
+</view> 

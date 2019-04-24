@@ -1,0 +1,12 @@
+.video {
+  width: 750rpx;
+  height: 100VH;
+}
+
+.nav-left-icon {
+  top: 72rpx;
+  left: 20rpx;
+  width: 44rpx;
+  height: 44rpx;
+  position: fixed;
+}

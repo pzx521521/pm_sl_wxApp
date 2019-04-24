@@ -1,0 +1,57 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/home-new/home-new",
+    "pages/category/category",
+    "pages/my/my",
+    "pages/search/search",
+    "pages/help/help",
+    "pages/about/about",
+    "pages/login/login",
+    "pages/setting/setting",
+    "pages/interest/interest",
+    "pages/detail/detail",
+    "pages/lesson_learn/lesson_learn"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#003797",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#646464",
+    "selectedColor": "#003192",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home-new/home-new",
+        "iconPath": "assets/images/foot_home.png",
+        "selectedIconPath": "assets/images/foot_home_o.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "assets/images/foot_fl.png",
+        "selectedIconPath": "assets/images/foot_fl_o.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "assets/images/foot_study.png",
+        "selectedIconPath": "assets/images/foot_study_o.png",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "assets/images/foot_zh.png",
+        "selectedIconPath": "assets/images/foot_zh_o.png",
+        "text": "账号"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

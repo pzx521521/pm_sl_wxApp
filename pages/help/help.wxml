@@ -1,0 +1,18 @@
+<nav-bar title="帮助与反馈">
+  <image bindtap='onBack' class='nav-left-icon' src="/assets/images/header/header_left.png"></image>
+</nav-bar>
+
+<!--view class='box box-shadow' wx:for="{{helpLists}}" wx:key="{{index}}" data-id="{{index}}" bindtap='onTagClicked'>
+  <view class='help-content'>
+    <view class='title'>{{item}}</view>
+    <image class='help-image' src="/assets/images/content/icon_right_black.png"></image>
+  </view>
+</view-->
+
+<view>
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="请输入反馈内容" name="textarea" class="feedback-content" value='{{textareaval}}'/>
+    <button form-type="submit" class="submit-btn">提交</button>
+  </form>
+</view>
+

@@ -1,0 +1,12 @@
+function statusString(status) {
+  if (status == 0) return ''
+  if (status == 1) return '加载中...'
+  if (status == 2) return '加载完成'
+  if (status == 3) return '加载失败'
+  if (status == 4) return '暂无相关内容'
+  return ''
+}
+
+module.exports = {
+  statusString: statusString
+}

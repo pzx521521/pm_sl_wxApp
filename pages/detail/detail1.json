@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar",
+    "nav-bar-gap": "/components/nav-bar-gap/nav-bar-gap",
+    "cell-category-header": "/components/cell-category-header",
+    "pop-input": "/components/pop-input/pop-input"
+  }
+}

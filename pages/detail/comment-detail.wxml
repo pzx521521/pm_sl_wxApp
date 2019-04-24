@@ -1,0 +1,20 @@
+<wxs module="util" src="../../utils/common.wxs"></wxs>
+
+<nav-bar title="评论详情">
+  <image bindtap='onBack' class='nav-left-icon' src="/assets/images/header/header_left.png"></image>
+</nav-bar>
+<view class="list" wx:if="comments && comments.length!=0">
+  <view class='comment-cell' wx:for="{{comments}}" :key="index">
+    <image :src="item.headimgurl" class='header header-border'></image>
+    <view class='comment-right-content'>
+      <view class='top-content'>
+        <text class='comment-nick-name'>{{item.uname}}</text>
+        <text class='comment-date'>{{util.formatDate(item.createDate)}}</text>
+      </view>
+      <text class='comment-content'>{{item.content}}</text>
+    </view>
+    <view class='comment-line'></view>
+  </view>
+</view>
+<loading-cell status="{{loadingStatus}}"></loading-cell>
+<comment-input class='comment-input' bindcommentSend="send"></comment-input>

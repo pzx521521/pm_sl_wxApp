@@ -1,0 +1,65 @@
+<wxs module="util" src="../../utils/common.wxs"></wxs>
+<nav-bar title="详情">
+  <image bindtap='onBack' class='nav-left-icon' src="/assets/images/header/header_left.png"></image>
+</nav-bar>
+<view class='nav-bar-menu'>
+  <image class='comment-btn' src='/assets/images/head_pj.png' bindtap='showCommentDialog'></image>
+</view>
+
+<image class='video-image' src="{{detailInfo.image}}"></image>
+<image class='play-btn' wx:if="{{detailInfo.type==1}}" src="/assets/images/content/课程详情/banner_video.png" bindtap='playVideo'></image>
+
+<view class='intro'>
+  <view class='header-container'>
+    <text class='head-content'>{{teacherInfo.name}}</text>
+    <text class='head-tap' bindtap='onLetter'>私信老师</text>
+  </view>
+  <view class='line-gap'></view>
+
+  <view class='middle-container'>
+    <text class='middle-content'>{{detailInfo.name}}</text>
+    <text class='middle-tap'>{{tabList[detailInfo.type]}}</text>
+    <view class='course-date'>上课时间:{{util.formatDate(detailInfo.startDate)}}</view>
+  </view>
+  <view class='line-gap'></view>
+
+  <view class='file-list' wx:if='{{detailInfo.type==2}}'>
+    <view class='file-head'>
+      <text class='file-icon'></text>
+      <cell-category-header title="课程地址"></cell-category-header>
+      <text class="address">{{detailInfo.address}}</text>
+    </view>
+    <view class='line-gap'></view>
+  </view>
+
+  <view class='file-list' wx:if='{{detailInfo.type==3}}'>
+    <view class='file-head'>
+      <text class="list-icon"></text>
+      <text class="list-title">文件目录</text>
+      <text class="list-right-title">全部个章节</text>
+    </view>
+    <view class='file-list-content' wx:for='{{chapters}}' wx:key='{{index}}' bindtap=''>
+      <text class="file-list-title">{{item.chaptername}}</text>
+      <text class="file-list-btn">观看</text>
+      <view class='line-gap'></view>
+    </view>
+  </view>
+
+  <cell-category-header title="课程问卷"></cell-category-header>
+  <view class="file-list-content" wx:for='{{surveys}}' wx:key='{{index}}'>
+    <text class="file-list-title">{{item.name}}</text>
+    <view class="file-list-btn [(item.status==1)?'active':'']" bindtap='gotoTosurveys' data-id='{{item.status}}' data-index='{{item.surveyId}}'>{{item.status===0?'去完成':'已完成'}}</view>
+  </view>
+  <view class='line-gap'></view>
+
+  <cell-category-header title="课程通知"></cell-category-header>
+  <view class='file-list-content' wx:for='{{messages}}' wx:key='{{index}}'>
+    <text class="file-list-title">{{item.content}}</text>
+  </view>
+
+  <view class="qrcode-content">
+    <image class="qrcode-image" src="{{detailInfo.qrcode}}"></image>
+  </view>
+</view>
+
+<pop-input wx:if="{{showLetter}}" title="私信" bindclickedIndex='inputClickedIndex'></pop-input>

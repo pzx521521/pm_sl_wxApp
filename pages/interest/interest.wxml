@@ -1,0 +1,17 @@
+<nav-bar title="学习兴趣">
+  <image bindtap='onBack' class='nav-left-icon' src="/assets/images/header/header_left.png"></image>
+</nav-bar>
+
+<text class='tips1'>选择你感兴趣的只是</text>
+<text class='tips2'>至少选择一个 可随时调整</text>
+
+<view wx:for="{{interestList}}" class='tags-section' wx:key="{{index}}">
+  <cell-category-header title="{{item.name}}"></cell-category-header>
+  <view class='tag-btns-container'>
+    <view wx:for="{{item.interestChildrenList}}" wx:key="{{index}}" class="tag-btn {{interestArr[item.id]?'interest-selected':''}}" bindtap='onTagClicked' data-selected="{{item.id}}">
+      {{item.name}}
+    </view>
+  </view>
+</view>
+
+<view class='choose-btn' bindtap='onChooseClicked'>选好了</view>

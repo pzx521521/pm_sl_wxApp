@@ -1,0 +1,59 @@
+@import "/utils/common.wxss";
+
+.title {
+  font-size: 28rpx;
+  color: #0f3691;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.content {
+  margin: 20rpx;
+  font-size: 24rpx;
+  color: #646464;
+  margin-top: 30rpx;
+}
+
+.box {
+  margin: 20rpx;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 1130rpx
+}
+
+.logo {
+  margin-top: 40rpx;
+  margin-left: 255rpx;
+  width: 200rpx;
+  height: 400rpx;
+  border-radius: 100rpx;
+}
+
+.about-content{
+  width: 710rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  background-color: rgb(255, 255, 255);
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40rpx;
+  position: relative;
+  box-shadow:0px 0px 20px 0px rgba(26, 53, 140, 0.15);
+}
+
+.about-text{
+  position: absolute;
+  left: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  top:20rpx
+}
+
+.content-text{
+  position: absolute;
+  right: 20rpx;
+  top:20rpx;
+  font-size: 28rpx;
+  color: #333;
+}

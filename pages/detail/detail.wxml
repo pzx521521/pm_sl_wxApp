@@ -1,0 +1,109 @@
+<wxs module="util" src="../../utils/common.wxs"></wxs>
+
+<nav-bar title="智荟">
+  <image bindtap='onBack' class='nav-left-icon' src="/assets/images/header/header_left.png"></image>
+</nav-bar>
+<view class='nav-bar-menu' wx:if="{{isEnroll}}" >
+  <image class='comment-btn' src='/assets/images/head_pj.png' bindtap='showCommentDialog'></image>
+</view>
+
+<image class='video-image' style="margin-top:{{isEnroll?'228rpx':'0rpx'}}" src="{{detailInfo.image}}"></image>
+<image class='play-btn' wx:if="{{detailInfo.type==1 && isEnroll}}" src="/assets/images/content/课程详情/banner_video.png" bindtap='playVideo'></image>
+<view class='tab-view'>
+  <view class='tab-btn' wx:for="{{tablist}}" wx:key="{{index}}" data-index="{{index}}" bindtap='onTabClicked'>
+    <text class="tab-text {{tabIndex==index?'tab-text-selected':''}}">{{item}}</text>
+    <view class="tab-line {{tabIndex==index?'tab-line-selected':''}}"></view>
+  </view>
+</view>
+
+<view class='intro' wx:if="{{tabIndex==0}}">
+  <view class='header-container'>
+    <text class='course-title'>{{detailInfo.name}}</text>
+    <view class='course-type-container'>
+      <text class='course-type'>{{util.courseTypeString(detailInfo.type)}}</text>
+      <text class='course-learned'>已有{{enrollNum}}人学过</text>
+      <view class='course-date-gap'></view>
+      <view class='course-date' wx:if="{{parstInfo(detailInfo.type)==2}}">上课时间:{{util.formatDate(detailInfo.startDate)}}</view>
+    </view>
+    <!-- <text class='course-price'>{{detailInfo.price?'￥'+detailInfo.price:'免费'}}</text> -->
+    <view class='line-gap'></view>
+  </view>
+
+  <cell-category-header title="课程讲师"></cell-category-header>
+  <view class='teacher-container'>
+    <view class='teacher-top'>
+      <image class='teacher-header' src="{{teacherInfo.headimgurl}}" bindtap='onTeacherHeaderClicked'></image>
+      <view class='teacher-top-right'>
+        <view class='teacher-name'>{{teacherInfo.name}}</view>
+        <text class='teacher-liked'>{{collectionNum}}人关注</text>
+      </view>
+      <view class='focus' bindtap='focus'>
+        <image src="{{isFocused?'/assets/images/icon_fav_o.png':'/assets/images/icon_fav.png'}}" class='focus-image'></image>
+        <text class="{{isFocused?'focus-text-selected':'focus-text'}}">关注</text>
+      </view>
+    </view>
+    <view class='teacher-bottom'>
+      <text class='teacher-intro'>{{teacherInfo.remark ? teacherInfo.remark : ''}}</text>
+    </view>
+  </view>
+  <view class='line-gap'></view>
+
+  <cell-category-header title="课程背景"></cell-category-header>
+  <text class='bg-text'>{{detailInfo.background}}</text>
+  <view class='line-gap'></view>
+
+  <cell-category-header title="课程受众"></cell-category-header>
+  <text class='audiences-text'>{{detailInfo.audiences}}</text>
+  <view class='line-gap'></view>
+
+  <cell-category-header title="学习收益"></cell-category-header>
+  <text class='target-text'>{{detailInfo.gains}}</text>
+
+  <cell-category-header title="其它介绍"></cell-category-header>
+  <text class='target-text'>{{detailInfo.target}}</text>
+</view>
+
+<view class='picture-info' wx:if="{{tabIndex==1}}">
+  <cell-category-header title="图文详情"></cell-category-header>
+  <view wx:if="{{introductions.length>0}}">
+    <image class='detail-image' wx:for="{{introductions}}" src='{{item.url}}' wx:key="{{index}}">
+    </image>
+  </view>
+  <view wx:else class='no-data'>暂无图文信息！</view>
+</view>
+
+<view class='picture-info' wx:if="{{tabIndex==2}}">
+  <cell-category-header title="全部评价"></cell-category-header>
+  <view wx:if="{{comments.length>0}}">
+    <view wx:for="{{comments}}" class='comment-cell' wx:key="{{index}}" bindtap='onCommentDetail' data-item='{{item.comment}}'>
+      <image src='{{item.comment.headimgurl}}' class='header'></image>
+      <view class='comment-right-content'>
+        <view class='top-content'>
+          <text class='comment-nick-name'>{{item.comment.uname}}</text>
+          <text class='comment-date'>{{util.formatDate(item.comment.createDate)}}</text>
+        </view>
+        <text class='comment-content'>{{item.comment.content}}</text>
+        <view class='comment-count-container'>
+          <view class="gap">
+          </view>
+          <image class='comment-count-icon' src="/assets/images/comment-icon.png"></image>
+          <text class='comment-count'>{{item.count}}</text>
+        </view>
+      </view>
+      <view class='comment-line'></view>
+    </view>
+  </view>
+  <view wx:else class='no-data'>暂无评论！</view>
+</view>
+
+<!-- <view class='detail-bottom-gap' wx:if="{{!isEnroll}}"></view>
+<view class='detail-bottom' wx:if="{{!isEnroll}}">
+  <view class='detail-video' bindtap='tryPlay'>
+    <image class='bottom-image' src='/assets/images/foot_video.png' />
+    <text class='bottom-text'>试看</text>
+  </view> -->
+  <!-- <view class='detail-price' bindtap='payOrder'>{{detailInfo.price?'购买 ￥'+detailInfo.price:'免费'}}</view> -->
+<!-- </view> -->
+<!-- <video wx:if="isPlayingVideo" id="myVideo" src="videoURL" enable-danmu danmu-btn controls></video> -->
+
+<pop-input wx:if="{{showCommentDialog}}" bindclickedIndex='commentBtnClicked'></pop-input>

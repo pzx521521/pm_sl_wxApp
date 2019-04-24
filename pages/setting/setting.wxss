@@ -1,0 +1,39 @@
+@import "/utils/common.wxss";
+
+.btn {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  height: 1rpx;
+  width: 740rpx;
+  margin-left: 10rpx;
+  background-color: lightgray;
+}
+
+.btn-text {
+  display: flex;
+  flex: 1;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+
+.arrow {
+  margin-right: 20rpx;
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.logout {
+  background-color: red;
+  width: 300rpx;
+  height: 80rpx;
+  color: white;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 100rpx;
+  margin-left: 225rpx;
+}

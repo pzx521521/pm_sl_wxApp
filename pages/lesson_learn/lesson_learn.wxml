@@ -1,0 +1,48 @@
+<nav-bar title="个人中心">
+</nav-bar>
+<view class="content">
+  <view class='video-box'>
+    <video src="{{info.url}}"></video>
+  </view>
+
+  <view class='detail-title' bindtap='star'>
+    <text>{{info.name}}</text>
+    <view class='detail-title-right'>收藏</view>
+  </view>
+
+  <view class='theand-time'>
+    <view class="theand-first">
+      <text><text class='theand-leftname'>备注:</text>
+      <text>info.remark</text></text>
+    </view>
+  </view>
+  <view class='gray-wrapper'></view>
+  <view class='picture-info'>
+    <cell-category-header title="全部评价">      
+    </cell-category-header>    
+    <image class='comment-count-icon' bindtap='modalinput' src="/assets/images/comment-icon.png"></image>
+    <view wx:if="{{comments.length>0}}">
+      <view wx:for="{{comments}}" class='comment-cell' wx:key="{{index}}">
+        <!-- <image src='{{item.comment.headimgurl}}' class='header'></image> -->
+        <view class='comment-right-content'>
+          <view class='top-content'>
+            <text class='comment-nick-name'>{{item.nickName}}:</text>
+            <text class='comment-date'>{{item.time}}</text>
+          </view>
+          <text class='comment-content'>{{item.content}}</text>
+          <view class='comment-count-container'>
+            <view class="gap">
+            </view>            
+            <!-- <text class='comment-count'>{{item.count}}</text> -->
+          </view>
+        </view>
+        <view class='comment-line'></view>
+      </view>
+    </view>
+    <view wx:else class='no-data'>暂无评论！</view>
+  </view>
+</view>
+
+<modal id="modal" hidden="{{hiddenmodalput}}" title="评论信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+      <textarea type='text' bindblur="bindTextAreaBlur" auto-height placeholder="请输入内容" auto-focus/>
+</modal>

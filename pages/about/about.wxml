@@ -1,0 +1,17 @@
+<nav-bar title="关于我们">
+  <image bindtap='onBack' class='nav-left-icon' src="/assets/images/header/header_left.png"></image>
+</nav-bar>
+
+<view class='box box-shadow'>
+  <image class='logo box-shadow' src='/assets/images/About.jpg'></image>
+  <view class='title'>杭州品茗软件有限公司</view>
+  <view class='about-content'>
+    <text class='about-text'>邮箱</text>
+    <text class='content-text'>1234@163.com</text>
+  </view>
+  <view class='about-content'>
+    <text class='about-text'>客服电话</text>
+    <text class='content-text'>12345678989</text>
+  </view>
+</view>
+

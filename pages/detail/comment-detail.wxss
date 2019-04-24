@@ -1,0 +1,86 @@
+@import "/utils/common.wxss";
+
+.comment-cell {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.header {
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+
+.comment-right-content {
+  display: flex;
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  flex-direction: column;
+  flex: 1;
+}
+
+.comment-nick-name {
+  color: #646464;
+  font-size: 24rpx;
+  width: 400rpx;
+  display: flex;
+}
+
+.comment-content {
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+
+.comment-line {
+  margin-top: 30rpx;
+  height: 2rpx;
+  margin-left: 30rpx;
+  width: 720rpx;
+  background-color: #dcdcdc;
+}
+
+.nav-bar-menu {
+  background-color: #003797;
+  top: 148rpx;
+  width: 750rpx;
+  height: 80rpx;
+  position: fixed;
+  z-index: 10000;
+}
+
+.comment-btn {
+  margin-left: 650rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.no-data {
+  font-size: 14px;
+  text-align: center;
+  color:#333
+}
+
+.comment-date {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  font-size: 22rpx;
+  width: 200rpx;
+  color: #646464;
+}
+
+.top-content {
+  flex-direction: row;
+  display: flex;
+  height: 50rpx;
+  align-items: center;
+}
+
+.comment-input {
+  position: fixed;
+  bottom: 0rpx;
+}

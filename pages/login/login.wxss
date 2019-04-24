@@ -1,0 +1,141 @@
+@import "/utils/common.wxss";
+
+page {
+  background-color: #eef0f2;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin-top: 50rpx;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: white;
+  border-radius: 100rpx;
+}
+
+.label-container {
+  margin-top: 30rpx;
+  width: 650rpx;
+  height: 60rpx;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.icon-phone {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.input-bg {
+  margin-top: 15rpx;
+  width: 610rpx;
+  height: 50rpx;
+  background-color: white;
+  border-radius: 5rpx;
+  padding: 20rpx;
+}
+
+.input {
+  height: 40rpx;
+}
+
+.label {
+  font-size: 28rpx;
+  color: #969696;
+}
+
+.label-right {
+  position: absolute;
+  font-size: 28rpx;
+  color: #969696;
+  right: 50rpx;
+}
+
+.submit {
+  margin-top: 30rpx;
+  width: 650rpx;
+  height: 90rpx;
+  background-color: rgb(15, 54, 145);
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: white;
+  font-size: 36rpx;
+}
+
+.forget-password-background {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 80;
+}
+
+.forget-password-popup {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 200rpx;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.password-type {
+  font-size: 36rpx;
+  padding-left: 60rpx;
+  color: #333;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+}
+
+.wexin-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.wexin-login {
+  margin-top: 30rpx;
+  width: 650rpx;
+  height: 90rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: #7ebb66;
+  font-size: 36rpx;
+  border: 1px solid #7ebb66;
+  margin-left: 50rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 220rpx;
+}
+
+.wexin-text {
+  margin-left: 10rpx;
+}
+
+/* .wexin-login{
+  border-radius: 5rpx;
+  margin-top: 15rpx;
+color:#7ebb66;
+background-color:transparent;
+font-size: 36rpx;
+ width: 650rpx;
+  height: 90rpx;
+  border:1px solid #7ebb66;
+} */

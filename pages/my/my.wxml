@@ -1,0 +1,28 @@
+<nav-bar title="个人中心">
+</nav-bar>
+<view class='bg'>
+  <view class='user-section' bindtap='onLogin'>
+    <image class='user-header' src="{{userInfo?userInfo.avatarUrl:'/assets/images/logo.png'}}"></image>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击登录 </button>
+    <block wx:else>
+      <view class='nick-name-container'>
+        <text class='nick-name'>{{userInfo?userInfo.nickName?userInfo.nickName:openid:'请登录'}}</text>
+        <text class='login-way' wx:if="{{openid!=0}}">ID: {{openid}}</text>
+      </view>
+    </block>
+  </view>
+  <view wx:for="{{titleList}}" class='section' wx:key="{{index}}">
+    <view wx:if="{{loginStatus===item.isLogin || !item.isLogin}}">
+      <view wx:for="{{item}}" class="cell" wx:key="{{index}}" bindtap='onCellClick' data-link="{{item.link}}" data-isLogin="{{item.isLogin}}">
+        <view class="cell-left-container">
+          <image src="{{item.icon}}"></image>
+          <view class="cell-text">{{item.title}}</view>
+        </view>
+        <view class="cell-right-container">
+          <view>{{item.content}}</view>
+          <image src="/assets/images/right_arrow_black.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

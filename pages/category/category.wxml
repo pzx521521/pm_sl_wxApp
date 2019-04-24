@@ -1,0 +1,17 @@
+<nav-bar title="分类浏览">
+  <image bindtap='onSearch' class='left-icon' src="/assets/images/header/header_search.png"></image>
+</nav-bar>
+
+<scroll-view class='left-menu' >
+  <view wx:for="{{classList}}" wx:key="{{index}}" bindtap="tabClicked" data-className="{{item}}" class="category-tab {{currentCategoryTitle==item?'category-tab-selected':''}}">{{item}}</view>
+</scroll-view>
+<scroll-view class='right-menu' scroll-y="true">
+  <image class='category-image' mode="aspectFill" src="https://i.loli.net/2019/04/24/5cbfd345f31fe.jpg"></image>
+  <view class='category-title'>{{currentCategoryTitle}}</view>
+  <view class='tag-btns-container'>
+    <view wx:for="{{currentFunctionList}}" wx:key="{{index}}" class='tag-btn' bindtap='onTagClicked' data-item="{{item}}">
+      {{item.keyword}}
+    </view>
+  </view>
+</scroll-view>
+

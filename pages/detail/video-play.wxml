@@ -1,0 +1,2 @@
+<video class="video" autoplay="true" src="{{url}}" controls></video>
+<image bindtap='onBack' class='nav-left-icon' src="/assets/images/header/header_left.png"></image>

@@ -1,0 +1,10 @@
+<nav-bar title="设置">
+  <image bindtap='onBack' class='nav-left-icon' src="/assets/images/header/header_left.png"></image>
+</nav-bar>
+
+<view class='btn' bindtap='onAbout'>
+  <text class='btn-text'>关于我们</text>
+  <image class='arrow' src="/assets/images/right_arrow_black.png"></image>
+</view>
+<view class='line'></view>
+

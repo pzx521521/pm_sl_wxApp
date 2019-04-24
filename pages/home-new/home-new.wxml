@@ -1,0 +1,21 @@
+<nav-bar title="涌金平台"></nav-bar>
+
+<scroll-view class='scroller'>
+  <swiper autoplay="{{true}}" indicatorDots="{{true}}" circular="{{true}}" indicator-color="lightGray" indicator-active-color="white" class="banner">
+    <swiper-item wx:for="{{bannerList}}" wx:key="{{index}}" wx:if="{{item.type}}" bindtap='onDetail' data-id='{{item.detailid}}'>
+      <image src="{{item.imgurl}}" class="banner_img" mode="aspectFill" ></image>
+    </swiper-item>
+  </swiper>
+  <view class='header-gap'></view>
+  <cell-category-header title="最新资讯"></cell-category-header>
+  <view wx:for="{{bannerList}}" wx:key="index" bindtap='onDetail' data-id='{{item.detailid}}' wx:if="{{item.type == 0}}">
+    <view class="course-content box-shadow">
+      <image class="course-image" src="{{item.imgurl}}" mode="aspectFill"></image>
+      <view class="course-info">
+        <text class="course-titlle">{{item.showtxt}}</text>
+        <view class="course-info-gap"></view>
+        <!-- <text class="course-price">{{item.course.price?'￥'+item.course.price:'免费'}}</text> -->
+      </view>
+    </view>
+  </view>
+</scroll-view>

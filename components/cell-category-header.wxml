@@ -1,0 +1,5 @@
+<view class='cell-category-header-container'>
+  <view class='cell-category-header-line'></view>
+  <text class='cell-category-header-title'>{{title}}</text>
+</view>
+

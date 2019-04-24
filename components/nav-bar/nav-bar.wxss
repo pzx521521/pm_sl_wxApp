@@ -1,0 +1,21 @@
+.nav-bar {
+  top: 0;
+  width: 750rpx;
+  height: 148rpx;
+  background-color: #003797;
+  position: fixed;
+  display: block;
+  z-index: 10000;
+}
+
+.nav-title {
+  position: absolute;
+  top: 40rpx;
+  left: 100rpx;
+  right: 100rpx;
+  bottom: 0rpx;
+  color: white;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 108rpx;
+}
